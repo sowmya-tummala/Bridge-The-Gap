@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 25vw;
+      }
+
+      h1,
+      p {
+        text-align: center;
+      }
+
+      /* font family is added */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      input {
+        margin: 0.25em 0em 1em 0em;
+        outline: none;
+        padding: 0.5em;
+        border: none;
+        background-color: rgb(225, 225, 225);
+        border-radius: 0.25em;
+        color: black;
+      }
+
+      /* styles for button */
+      button {
+        padding: 0.75em;
+        border: none;
+        outline: none;
+        background-color: rgb(68, 18, 232);
+        color: white;
+        border-radius: 0.25em;
+      }
+
+      /* hover functionality for button */
+      button:hover {
+        cursor: pointer;
+        background-color: rgb(41, 4, 164);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <ul class="nav navbar-nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/admin">ADMIN</a></li>
+        <li><a href="/user">USER</a></li>
+        <li><a href="/mediator">MEDIATOR</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br /><br />
+    <h3 style="text-align: center">LOGIN PAGE</h3>
+    <br /><br />
+    <form action="/logindata" method="POST">
+      <div class="container">
+        <label> USERID: </label><br />
+        <input
+          type="text"
+          name="aadhar"
+          id="aadhar"
+          placeholder="Enter USER ID"
+        />
+        <br />
+        <label> Password: </label><br />
+        <input
+          type="password"
+          name="pwd"
+          id="pwd"
+          placeholder="enter password"
+        />
+        <br />
+        <button type="submit">Login</button><br /><br />
+      </div>
+    </form>
+
+    {{res}}
+  </body>
+</html>

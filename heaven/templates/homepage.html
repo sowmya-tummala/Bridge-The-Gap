@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      div.part1 {
+        padding: 150px;
+        text-align: center;
+        color: white;
+      }
+      div.head {
+        font-size: 100px;
+        font-weight: bolder;
+      }
+      .btn {
+        background-color: transparent;
+        height: 40px;
+        width: 150px;
+        border: 2px solid white;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        transition: font-size 0.5s;
+      }
+      .btn:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        font-size: 20px;
+      }
+      div.img {
+        width: 100%;
+        /* background-size: cover; */
+        background-color: seagreen;
+        box-shadow: 0px -80px 100px 5px white inset;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <ul class="nav navbar-nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/admin">ADMIN</a></li>
+        <li><a href="/user">USER</a></li>
+        <li><a href="/mediator">MEDIATOR</a></li>
+      </ul>
+    </nav>
+
+    <div class="img">
+      <div class="part1">
+        <div class="head">BRIDGE THE GAP</div>
+        <br />
+        <div>Clearing the gap between government and citizens.<br /></div>
+        <br /><br />
+        <form action="/home" method="POST">
+          <button type="submit" name="start" class="btn btn-default">
+            Get started
+          </button>
+        </form>
+        <!-- <a href="hobby"><button class="btn">JOIN US</button></a> -->
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head
+  ><style>
+    body {
+      background-color: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    }
+  </style>
+  <body style="background-color: #33ccff">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <ul class="nav navbar-nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/admin">ADMIN</a></li>
+        <li><a href="/user">USER</a></li>
+        <li><a href="/mediator">MEDIATOR</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br /><br /><br />
+    <div class="container">
+      <form action="/viewedu" method="POST">
+        <button type="submit" name="submit" class="btn btn-default">
+          Education
+        </button>
+      </form>
+      <form action="/viewcli" method="POST">
+        <button type="submit" name="submit" class="btn btn-default">
+          Climate
+        </button>
+      </form>
+      <form action="/viewned" method="POST">
+        <button type="submit" name="submit" class="btn btn-default">
+          Needs
+        </button>
+      </form>
+      <form action="/viewhea" method="POST">
+        <button type="submit" name="submit" class="btn btn-default">
+          Health care
+        </button>
+      </form>
+      <form action="/vieweco" method="POST">
+        <button type="submit" name="submit" class="btn btn-default">
+          Economy
+        </button>
+      </form>
+      <form action="/viewsec" method="POST">
+        <button type="submit" name="submit" class="btn btn-default">
+          Security
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

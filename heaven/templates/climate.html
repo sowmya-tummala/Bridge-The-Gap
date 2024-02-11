@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>climate</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background-image: url("bg-1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .t {
+        width: 100px;
+        height: 50px;
+      }
+      h1 {
+        font-size: 100px;
+      }
+      .c {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <ul class="nav navbar-nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/admin">ADMIN</a></li>
+        <li><a href="/user">USER</a></li>
+        <li><a href="/mediator">MEDIATOR</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br /><br />
+
+    <h2>Climate</h2>
+
+    <form class="c" action="/cli" method="POST">
+      <label>Select your Requirement:</label>
+      <select name="need1" id="need1">
+        <option value="">--select--</option>
+        <option value="More disaster management supplies">
+          More disaster management supplies
+        </option>
+        <option value="Increase flood management funds">
+          Increase flood management funds
+        </option>
+        <option value="Implement green recovery programmes">
+          Implement green recovery programmes
+        </option>
+        <option
+          value="Ban plastic, increase sustainable production and green infrastructure"
+        >
+          Ban plastic, increase sustainable production and green infrastructure
+        </option>
+        <option value="Laws to use only clean energy for all industries">
+          Laws to use only clean energy for all industries
+        </option>
+        <option value="Laws on pollution for industries">
+          Laws on pollution for industries
+        </option></select
+      ><br /><br />
+      <label>Other:</label>
+      <input
+        type="text"
+        name="other"
+        id="other"
+        value="type your requirement here"
+      /><br />
+
+      <input class="t" type="submit" value="Submit" />
+    </form>
+
+    <br /><br />
+
+    <br />
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthCare</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background-image: url("bg-1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .t {
+        width: 100px;
+        height: 50px;
+      }
+      h1 {
+        font-size: 100px;
+      }
+      .c {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <ul class="nav navbar-nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/admin">ADMIN</a></li>
+        <li><a href="/user">USER</a></li>
+        <li><a href="/mediator">MEDIATOR</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br /><br />
+
+    <h2>Health</h2>
+
+    <form class="c" action="/hea" method="POST">
+      <label>Type down your need:</label>
+      <select name="need1" id="need1">
+        <option value="">--select--</option>
+        <option value="Absence of Medical Supplies">
+          Absence of Medical Supplies
+        </option>
+        <option value="Require proper infrastructure">
+          Require proper infrastructure
+        </option>
+        <option value="Reduce OP fee">Reduce OP fee</option>
+        <option value="Insufficient medicines">Insufficient medicines</option>
+        <option value="Require more beds">Require more beds</option>
+        <br /><br />
+      </select>
+      <br /><br />
+      <label>other</label>
+
+      <input type="text" name="other" placeholder="Enter the issue" />
+
+      <br /><br />
+
+      <input class="t" type="submit" value="Submit" />
+    </form>
+    <br />
+  </body>
+</html>

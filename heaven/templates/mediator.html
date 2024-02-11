@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediator</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body style="background-color: lightseagreen;">
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <ul class="nav navbar-nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/admin">ADMIN</a></li>
+        <li><a href="/user">USER</a></li>
+        <li><a href="/mediator">MEDIATOR</a></li>
+  </nav>
+  <br /><br /><br /><br /><br />
+  <div class="container">
+    <form action="/result" method="POST">
+    <button type="submit" name="submit" class="btn btn-default">
+    view results
+    </button>
+    Total Problems: {{cou}}
+    </form>
+    <h2>Education</h2>         
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Problems</th>
+          <th>count</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for i in edu %}
+      <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+      </table>
+        <form action="/sendedu" method="POST">
+          <div class="container">
+            <label>Problem </label><br />
+            <input
+              type="text"
+              name="prblm"
+              id="prblm"
+            />
+            <br />
+            <label>Count</label><br />
+            <input
+              type="text"
+              name="cnt"
+              id="cnt"
+            />
+            <br />
+            <label>Assign:</label>
+      <select name="assign" id="assign">
+        <option value="">--select--</option>
+        <option value="local">
+          local
+        </option>
+        <option value="state">
+          state
+        </option>
+        </select
+      ><br />
+            <br />
+            <button type="submit">Send</button><br /><br />
+    
+        </form>
+      
+
+
+        <h2>Climate</h2>         
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Problems</th>
+              <th>count</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in cli %}
+            <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <form action="/sendcli" method="POST">
+          <div class="container">
+            <label>Problem </label><br />
+            <input
+              type="text"
+              name="prblm"
+              id="prblm"
+            />
+            <br />
+            <label>Count</label><br />
+            <input
+              type="text"
+              name="cnt"
+              id="cnt"
+            />
+            <br />
+            <label>Assign:</label>
+      <select name="assign" id="assign">
+        <option value="">--select--</option>
+        <option value="local">
+          local
+        </option>
+        <option value="state">
+          state
+        </option>
+        </select
+      ><br />
+            <br />
+            <button type="submit">Send</button><br /><br />
+    
+        </form>
+      
+
+
+        <h2>Needs</h2>         
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Problmes</th>
+              <th>count</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in ned %}
+            <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+
+        <form action="/sendcli" method="POST">
+          <div class="container">
+            <label>Problem </label><br />
+            <input
+              type="text"
+              name="prblm"
+              id="prblm"
+            />
+            <br />
+            <label>Count</label><br />
+            <input
+              type="text"
+              name="cnt"
+              id="cnt"
+            />
+            <br />
+            <label>Assign:</label>
+      <select name="assign" id="assign">
+        <option value="">--select--</option>
+        <option value="local">
+          local
+        </option>
+        <option value="state">
+          state
+        </option>
+        </select
+      ><br />
+            <br />
+            <button type="submit">Send</button><br /><br />
+    
+        </form>
+      
+
+
+        <h2>Health Care</h2>         
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Problmes</th>
+              <th>count</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in hea %}
+            <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+
+        <form action="/sendhea" method="POST">
+          <div class="container">
+            <label>Problem </label><br />
+            <input
+              type="text"
+              name="prblm"
+              id="prblm"
+            />
+            <br />
+            <label>Count</label><br />
+            <input
+              type="text"
+              name="cnt"
+              id="cnt"
+            />
+            <br />
+            <label>Assign:</label>
+      <select name="assign" id="assign">
+        <option value="">--select--</option>
+        <option value="local">
+          local
+        </option>
+        <option value="state">
+          state
+        </option>
+        </select
+      ><br />
+            <br />
+            <button type="submit">Send</button><br /><br />
+    
+        </form>
+      
+
+
+        <h2>Economics</h2>         
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Problmes</th>
+              <th>count</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in eco %}
+            <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <form action="/sendeco" method="POST">
+          <div class="container">
+            <label>Problem </label><br />
+            <input
+              type="text"
+              name="prblm"
+              id="prblm"
+            />
+            <br />
+            <label>Count</label><br />
+            <input
+              type="text"
+              name="cnt"
+              id="cnt"
+            />
+            <br />
+            <label>Assign:</label>
+      <select name="assign" id="assign">
+        <option value="">--select--</option>
+        <option value="local">
+          local
+        </option>
+        <option value="state">
+          state
+        </option>
+        </select
+      ><br />
+            <br />
+            <button type="submit">Send</button><br /><br />
+    
+        </form>
+      
+
+
+        <h2>Security</h2>         
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Problmes</th>
+              <th>count</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in sec %}
+            <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[1]}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <form action="/sendsec" method="POST">
+          <div class="container">
+            <label>Problem </label><br />
+            <input
+              type="text"
+              name="prblm"
+              id="prblm"
+            />
+            <br />
+            <label>Count</label><br />
+            <input
+              type="text"
+              name="cnt"
+              id="cnt"
+            />
+            <br />
+            <label>Assign:</label>
+      <select name="assign" id="assign">
+        <option value="">--select--</option>
+        <option value="local">
+          local
+        </option>
+        <option value="state">
+          state
+        </option>
+        </select
+      ><br />
+            <br />
+            <button type="submit">Send</button><br /><br />
+    
+        </form>
+      
+
+
+
+
+
+      
+    </div>
+  </body>
+</html>
